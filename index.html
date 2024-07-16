@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- ABOUT -->
+    <!-- Concept based on tutorial "Creating a Fallout-Style UI Using Modern CSS" by Massimo Avisati -->
+    <!-- Source: https://www.codemotion.com/magazine/frontend/creating-a-fallout-style-ui-using-modern-css/?ref=dailydev -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ISONAUT PLRS STATION</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body class="old-crt-monitor">
+    <div class="retro-container scanline-effect">
+        <header>
+            <h1>ISONAUT PLRS13 STATION</h1>
+            <nav role="navigation">
+                <ul>
+                    <li><a href="#screen-1">Home</a></li>
+                    <li><a href="#screen-2">Crew</a></li>
+                    <li><a href="#screen-3">Station</a></li>
+                    <li><a href="#screen-4">Data</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="screen-1">
+                <article>
+                    <h2>HOME<alert class="cursor">▉</alert></h2>
+                    <div class="content">
+                        <div class="lorem">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis rerum optio consequatur, fuga illum voluptas tempora, veritatis facere eveniet quasi ut praesentium commodi quam, itaque sed incidunt ipsa. Odit numquam accusamus similique ad.</p> <p>Soluta maiores iste similique nihil cupiditate error dignissimos consequuntur officiis inventore quo ipsam delectus assumenda consectetur at sed sunt, nam commodi harum culpa mollitia in corrupti repudiandae.</p><!-- <p>Praesentium enim consequuntur ab quae accusantium tempora temporibus rem cupiditate necessitatibus dolor nam aperiam quo earum, sequi ut nihil autem, est dolores velit illum vel asperiores atque odio eos! Dolorem vel eveniet alias rerum! Dolorum porro sunt doloribus quibusdam suscipit.</p> -->
+                        </div>
+                    <figure class="ascii">
+                        !
+                        !
+                        ^
+                       / \
+                      /___\
+                     |=   =|
+                     |     |
+                     |     |
+                     |     |
+                     |     |
+                     |     |
+                     |     |
+                     |     |
+                     |     |
+                     |     |
+                    /|##!##|\
+                   / |##!##| \
+                  /  |##!##|  \
+                 |  / ^ | ^ \  |
+                 | /  ( | )  \ |
+                 |/   ( | )   \|
+                     ((   ))
+                    ((  :  ))
+                    ((  :  ))
+                     ((   ))
+                      (( ))
+                       ( )
+                        .
+                        .
+                        .
+                       <!-- <img src="./assets/sun.png" alt="a psychedelic illustration of the sun"> -->
+                    </figure>
+                    </div>
+                </article>
+            </section>
+            <section id="screen-2">
+                <h2>CREW<alert class="cursor">▉</alert></h2>
+                <table>
+                    <tr>
+                        <th>Staff</th>
+                        <th>Position</th>
+                    </tr>
+                    <tr>
+                        <td>Louise Camelot</td>
+                        <td>Chief Data Scientist</td>
+                    </tr>
+                    <tr class="vacancy">
+                        <td><alert class="red">VACANT</alert></td>
+                             <td>Chief Operations Officer</td></alert>
+                         </tr>
+                    <tr>
+                        <td>Sankeerthi Singh</td>
+                        <td>Crane Operator</td>
+                    </tr>
+                    <tr>
+                        <td>Miseria Cane</td>
+                        <td>Chief Steward</td>
+                    </tr>
+                    <tr>
+                        <td>Valerie Knight</td>
+                        <td>Chef</td>
+                    </tr>
+                    <tr>
+                        <td>Missy Leith</td>
+                        <td>Boom Operator</td>
+                    </tr>
+                    <tr>
+                        <td>Adrena Seamus</td>
+                        <td>Warden</td>
+                    </tr>
+                    <tr>
+                        <td>Lisbet Bartholemew</td>
+                        <td>Bosun</td>
+                    </tr>
+                    <tr>
+                        <td>Janine Hyundai</td>
+                        <td>Choreographer</td>
+                    </tr>
+                    <tr>
+                        <td>Helmut Snood</td>
+                        <td>Chief Financial Officer</td>
+                    </tr>
+                    <tr>
+                        <td>Mankel Mists</td>
+                        <td>Assistant to Ms Singh</td>
+                    </tr>
+                </table>
+
+            </section>
+            <section id="screen-3">
+                <h2>STATION<alert class="cursor">▉</alert></h2>
+                <table>
+                    <th>Location</th>
+                    <th>Status</th>
+                    <th>Risk Level</th>
+                    <tr class="yellow-bar">
+                        <td>CEO office</td>
+                        <td>OK</td>
+                        <td class="green">LOW</td>
+                    <tr>
+                        <tr class="amber-highlight">
+                            <td>Laboratory 1</td>
+                            <td>Supply delivery expected 24/5</td>
+                            <td><alert class="amber">MEDIUM</alert></td>
+                        <tr>
+                            <tr class="yellow-bar">
+                                <td>Laboratory 2</td>
+                                <td>OK</td>
+                                <td class="green">LOW</td>
+                            <tr>
+                            <tr>
+                                <td>Assembly area</td>
+                                <td>OK</td>
+                                <td class="green">LOW</td>
+                            <tr>
+                        <td>Cooler</td>
+                        <td>Sealant degraded</td>
+                        <td><alert class="red">CRITICAL</alert></td>
+                    </tr>
+                    <tr>
+                        <td>Kitchenette</td>
+                        <td>OK</td>
+                        <td class="green">LOW</td>
+                    <tr>
+                </table>
+
+
+            </section>
+            <section id="screen-4">
+                <h2>DATA<alert class="cursor">▉</alert></h2>
+                <div>No data available. Please check your access credentials and try again.</div>
+        </main>
+        <footer>
+            <p>(c) 2024 Isonaut PLRS 13</p>
+        </footer>
+    </div>
+</body>
+<script src="/script.js"></script>
+</html>

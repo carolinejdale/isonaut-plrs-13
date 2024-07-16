@@ -1,0 +1,300 @@
+:root {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+  /*  --primary-color: #ffd52c; */
+  --primary-color: #00ff3c;
+    --secondary-color: #ffec9f;
+    --tertiary-color: #c72d04;
+    --background-color: #111;
+    --amber-alert: #ff9a03;
+    --green-alert: #00ff3c;
+    font-size: clamp(18px, 3vw, 30px);
+    scrollbar-color: var(--primary-color) var(--background-color);
+    overflow-y: hidden;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   /* border: 1px solid rgb(57, 54, 54); */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    cursor: url('./assets/yellow_arrow.png'), crosshair;
+    scrollbar-gutter: stable;
+
+}
+
+a {
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+li {
+    display: inline;
+    list-style: none;
+}
+
+nav {
+    padding-right: 1vw;
+}
+
+/* responsive layout */
+div.retro-container {
+    width: 95vw;
+    height: 90vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    text-shadow: 0 0 0.5rem;
+    mask-image: linear-gradient(to bottom, #0005 50%, #000 50%);
+    mask-size: 100% 2px;
+}
+
+article {
+    padding: 0;
+}
+
+.content {
+    width: 95vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+/*
+.content img { 
+    display: none;
+    position: static;
+    padding-right: 1vw;
+    opacity: 20%;
+}
+    */
+
+.ascii {
+    font-family: monospace;
+    white-space: pre;
+    font-size: 0.5rem;
+    align-self: first baseline;
+}
+
+header,footer {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer {
+    padding-top: 1vh;
+}
+
+main {
+    overflow: hidden;
+}
+
+section {
+    height: 100%;
+    overflow: hidden auto;
+    margin: 1vh 0.5vw;
+}
+
+h1, h2 {
+    padding-bottom: 10px;
+    justify-content: center;
+}
+
+p {
+    padding-bottom: 1vh;
+}
+
+/* table formatting */
+table {
+    min-width: 60%;
+    font-size: 1.1rem;
+    border-spacing: 5px;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    padding: 5px;
+    text-shadow: 0 0 1rem;
+}
+
+td {
+    padding: 1vh 1vw;
+    border: 1px solid var(--primary-color);
+    height: 50px;
+    text-shadow: 0 0 1rem;
+}
+
+tr:hover {
+    color: #000;
+    background-color: var(--primary-color);
+    border-color: 1px solid var(--background-color);
+    text-shadow: 0 0 1rem;
+}
+
+tr:hover td {
+    color: #000;
+}
+
+/*
+.amber-highlight:hover {
+    background-color: var(--amber-alert);
+    text-shadow: 0 0 1rem;
+    animation: blink-bg-amber-2;
+}
+*/
+
+/*
+.amber-highlight:hover td {
+    border: none;
+    color: #000;
+    }*/
+
+.red-highlight:hover {
+    background-color: var(--tertiary-color);
+    text-shadow: 0 0 1rem;
+}
+
+.red-highlight:hover td {
+    border: none;
+}
+
+/* old CRT monitor effect */
+@keyframes crtAnimation {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 0 10000%;
+    }
+}
+
+.old-crt-monitor {
+    box-shadow: inset 0px 0px 2rem;
+    background-image: linear-gradient(0deg, #0000 10%, rgba(255, 255, 255, 0.239) 90%, #0000 100%);
+    animation: crtAnimation 100s linear infinite;
+    background-size: 100% 80%;
+}
+
+/* lo-fi terminal lines */
+div.retro-container {
+    mask-image: linear-gradient(to bottom, #0005 50%, #000 50%);
+    mask-size: 100% 2px;
+}
+
+/* alert elements */
+
+.red {
+    font-weight: bold;
+    animation: blink-bg 1s ease-out infinite;
+}
+
+@keyframes blink-bg {
+    0%, 60% {
+        text-shadow: 0 0 10.5rem;
+        color: var(--primary-color);
+    }
+    70%, 100% {
+        text-shadow: 0 0 20.5rem;
+        color: var(--tertiary-color);
+    }
+}
+
+
+.amber {
+    font-weight: bold;
+    color: var(--amber-alert);
+/*
+    animation: blink-bg-amber 1s ease-out infinite;
+}
+
+@keyframes blink-bg-amber {
+    0%, 60% {
+        text-shadow: 0 0 10.5rem;
+        color: var(--primary-color);
+    }
+    70%, 100% {
+        text-shadow: 0 0 20.5rem;
+        color: var(--amber-alert);
+    }
+}
+*/
+}
+
+.green {
+    color: var(--green-alert)
+}
+.cursor {
+    animation: blink-bg2 1s ease-in-out infinite;
+}
+    @keyframes blink-bg2 {
+        0%, 60% {
+            text-shadow: 0 0 10.5rem;
+            color: var(--background-color);
+        }
+    70%, 100% {
+        text-shadow: 0 0 20.5rem;
+        color: var(--primary-color);
+        opacity: 50%;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    body {
+        scrollbar-gutter: auto;
+    }
+ h2 {
+    text-align: center;
+ }
+
+
+    .content {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    max-height: 100vh;
+    align-items: center;
+    font-size: 1.2rem;
+       }
+
+       /*
+    .content img {
+        opacity: 100%;
+        z-index: 0;
+        clip-path: inset(0px 0px 50% 0px);
+        padding-bottom: 0;
+        position: static;
+   }
+        */
+
+        .content img {
+            display: none;
+        }
+
+    figure {
+        display: none;
+    }
+
+   .content .lorem {
+    z-index: 1;
+    top: 0vh;
+    flex-grow: 2;
+   }
+}
